@@ -1,6 +1,10 @@
 <resources>
     <string name="app_name">fakePedometr</string>
-    <string name="step">Шаги</string>
+    <string name="Now">Сегодня</string>
+    <string name="Report">Отчет</string>
+    <string name="More">Еще</string>
+
+    <!--Main activity-->
     <string name="counter_step">0</string>
     <string name="counter_calorie">0</string>
     <string name="counter_path">0</string>
@@ -8,8 +12,21 @@
     <string name="description_path">Км</string>
     <string name="description_calorie">Ккал</string>
     <string name="description_time">Время ходьбы</string>
-    <string name="Home">Home</string>
-    <string name="Settings">Settings</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="step">Шагов</string>
+
+    <!--Settings activity-->
+    <string name="All">Всего</string>
+    <string name="History">История</string>
+    <string name="Reserve">Резервное копирование и восстановление</string>
+    <string name="Goals">Цели по количеству шагов:</string>
+    <string name="Weight">Вес</string>
+    <string name="Weight_description">Нужно для расчета калорий</string>
+    <string name="Language">Выбор языка</string>
+    <string name="Feedback">Обратная связь</string>
+    <string name="Share">Поделиться с друзьями</string>
+    <string name="Politic">Политика конфиденциальности</string>
+
+
+
+
 </resources>

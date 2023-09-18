@@ -5,6 +5,21 @@
     <color name="purple_700">#FF3700B3</color>
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
-    <color name="black">#FF000000</color>
+    <color name="black">#000000</color>
     <color name="white">#FFFFFFFF</color>
+    
+    
+    <color name="peach">#EAB595</color>
+    <color name="icons">#D85C34</color>
+    <color name="active_white_bottom">#7E9680</color>
+    <color name="back_white_bottom">#C9ADA7</color>
+    <color name="gradient2_main_button_white">#D87F81</color>
+    <color name="back_white">#F2E9EA</color>
+    <color name="back_dark_bottom">#0F0F14</color>
+    <color name="back_dark">#22223B</color>
+    <color name="gradient2_main_button_dark">#4D3E4A</color>
+    <color name="gradient_main_button_dark">#9A8C98</color>
+    <color name="icons_setting_dark">#276882</color>
+    <color name="setting_panel_dark">#868BA9</color>
+
 </resources>
