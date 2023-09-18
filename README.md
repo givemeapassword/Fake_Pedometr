@@ -1,2 +1,2 @@
 # fakePedometr
-![Текст с описанием картинки](/screen.jpg)
+<image src="/screen.png" alt="Текст с описанием картинки">
