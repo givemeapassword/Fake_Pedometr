@@ -19,7 +19,7 @@ class Home : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
-            return inflater.inflate(R.layout.activity_main, container, false)
+            return inflater.inflate(R.layout.active_main, container, false)
     }
 
 }

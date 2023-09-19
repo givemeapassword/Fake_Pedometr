@@ -1,5 +1,6 @@
 package com.example.fakepedometr
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.text.Layout
 import android.view.View
@@ -12,17 +13,18 @@ import androidx.core.view.isInvisible
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
-import com.example.fakepedometr.databinding.ActivityMainBinding
+import com.example.fakepedometr.databinding.ActiveMainBinding
 
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityMainBinding
+    private lateinit var binding: ActiveMainBinding
     private lateinit var constraintLayout: ConstraintLayout
 
+    @SuppressLint("SuspiciousIndentation")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityMainBinding.inflate(layoutInflater)
+        binding = ActiveMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         constraintLayout = findViewById(R.id.main)
 

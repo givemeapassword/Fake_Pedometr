@@ -11,7 +11,7 @@
     <string name="counter_time">0</string>
     <string name="description_path">Км</string>
     <string name="description_calorie">Ккал</string>
-    <string name="description_time">Время ходьбы</string>
+    <string name="description_time">Время</string>
     <string name="step">Шагов</string>
 
     <!--Settings activity-->
