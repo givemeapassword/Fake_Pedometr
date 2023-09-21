@@ -1,16 +1,57 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.FakePedometr" parent="Theme.MaterialComponents.DayNight">
+    <style name="Theme.FakePedometr" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/purple_200</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>
-        <item name="colorOnPrimary">@color/back_dark</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/teal_200</item>
         <item name="colorSecondaryVariant">@color/teal_200</item>
-        <item name="colorOnSecondary">@color/back_dark</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor">@color/back_dark</item>
         <!-- Customize your theme here. -->
     </style>
+
+
+    <style name="BottomNavigationView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="labelVisibilityMode">unlabeled</item>
+        <item name="itemBackground">@color/back_dark_bottom</item>
+        <item name="itemIconTint">@color/back_white_bottom</item>
+        <item name="itemIconSize">35dp</item>
+        <item name="menu">@menu/bottom_nav</item>
+    </style>
+
+    <style name="TextLeft">
+        <item name="android:textColor">@color/back_white_bottom</item>
+        <item name="android:textSize">35sp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">21dp</item>
+        <item name="android:layout_marginTop">7dp</item>
+    </style>
+
+    <style name="Button">
+        <item name="android:startColor">@color/peach</item>
+        <item name="android:endColor">@color/gradient2_main_button_white</item>
+        <item name="background">@drawable/circle_button_white</item>
+    </style>
+
+    <style name="Main_text" parent="LinerLayout">
+        <item name="android:textColor">@color/back_white</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+    <style name="Theme">
+        <item name="android:background">@color/back_dark</item>
+    </style>
+    <style name="Line">
+        <item name="android:layout_width">145dp</item>
+        <item name="android:layout_height">4dp</item>
+        <item name="android:layout_marginStart">21dp</item>
+        <item name="android:background">@color/back_white_bottom</item>
+    </style>
+
+
 </resources>
