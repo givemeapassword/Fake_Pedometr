@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/Theme"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:text="@string/More"
+                    android:id="@+id/textView"
+                    style="@style/TextLeft"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+                <View
+                    style="@style/Line"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView" />
+            </LinearLayout>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="120dp"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/moon"
+                android:layout_gravity="center_vertical"
+                app:tint="@color/moon" />
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switcher"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:layout_gravity="center_vertical" />
+
+        </LinearLayout>
+
+
+        <androidx.cardview.widget.CardView
+            style="@style/SettingCard">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                style="@style/SettingCard_Theme"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="10dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="247dp"
+                        android:layout_marginStart="10dp"
+                        android:textColor="@color/back_dark_bottom"
+                        android:text="@string/All"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/back_dark_bottom"
+                        android:text="@string/History" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginEnd="120dp"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/back_dark_bottom"
+                            android:text="@string/counter_path"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/back_dark_bottom"
+                            android:text="@string/description_path"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:layout_marginEnd="120dp"
+                        >
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/back_dark_bottom"
+                            android:text="@string/counter_path"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/back_dark_bottom"
+                            android:text="@string/description_path"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/back_dark_bottom"
+                            android:text="@string/counter_path"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/back_dark_bottom"
+                            android:text="@string/description_path"/>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            style="@style/SettingCard"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="58dp"
+                android:orientation="horizontal"
+                android:clickable="true"
+                android:foreground="?attr/selectableItemBackground"
+                style="@style/SettingCard_Theme">
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="11dp"
+                    android:src="@drawable/google"
+                    style="@style/Icons_setting" />
+                <TextView
+                    android:layout_marginStart="10dp"
+                    android:layout_width="250dp"
+                    android:layout_height="41dp"
+                    android:textSize="15sp"
+                    style="@style/text_setting"
+                    android:text="@string/Reserve"/>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            style="@style/SettingCard">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="58dp"
+                android:orientation="horizontal"
+                android:clickable="true"
+                android:foreground="?attr/selectableItemBackground"
+                style="@style/SettingCard_Theme">
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="11dp"
+                    android:src="@drawable/bullseye_arrow"
+                    style="@style/Icons_setting" />
+                <TextView
+                    android:layout_marginStart="10dp"
+                    android:layout_width="250dp"
+                    android:layout_height="20dp"
+                    android:textSize="15sp"
+                    style="@style/text_setting"
+                    android:text="@string/Goals"/>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            style="@style/SettingCard">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="58dp"
+                android:orientation="horizontal"
+                android:clickable="true"
+                android:foreground="?attr/selectableItemBackground"
+                style="@style/SettingCard_Theme">
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="11dp"
+                    android:src="@drawable/scale"
+                    style="@style/Icons_setting" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_width="250dp"
+                        android:layout_height="20dp"
+                        android:textSize="15sp"
+                        style="@style/text_setting"
+                        android:text="@string/Weight"/>
+                    <TextView
+                        android:layout_width="250dp"
+                        android:layout_height="20dp"
+                        android:layout_marginStart="10dp"
+                        android:textSize="10sp"
+                        style="@style/text_setting"
+                        android:text="@string/Weight_description"/>
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            style="@style/SettingCard"
+            android:id="@+id/Counter"
+            android:layout_marginTop="12dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="58dp"
+                android:orientation="horizontal"
+                android:clickable="true"
+                android:foreground="?attr/selectableItemBackground"
+                style="@style/SettingCard_Theme">
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="11dp"
+                    android:src="@drawable/pencil"
+                    style="@style/Icons_setting" />
+                <TextView
+                    android:layout_marginStart="10dp"
+                    android:layout_width="250dp"
+                    android:layout_height="20dp"
+                    android:textSize="15sp"
+                    style="@style/text_setting"
+                    android:text="@string/Silence"/>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            style="@style/SettingCard"
+            android:layout_marginTop="12dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="58dp"
+                android:orientation="horizontal"
+                android:clickable="true"
+                android:foreground="?attr/selectableItemBackground"
+                style="@style/SettingCard_Theme">
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="11dp"
+                    android:src="@drawable/world"
+                    style="@style/Icons_setting" />
+                <TextView
+                    android:layout_marginStart="10dp"
+                    android:layout_width="250dp"
+                    android:layout_height="20dp"
+                    android:textSize="15sp"
+                    style="@style/text_setting"
+                    android:text="@string/Language"/>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            style="@style/SettingCard">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="58dp"
+                android:orientation="horizontal"
+                android:clickable="true"
+                android:foreground="?attr/selectableItemBackground"
+                style="@style/SettingCard_Theme">
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="11dp"
+                    android:src="@drawable/messages"
+                    style="@style/Icons_setting" />
+                <TextView
+                    android:layout_marginStart="10dp"
+                    android:layout_width="250dp"
+                    android:layout_height="20dp"
+                    android:textSize="15sp"
+                    style="@style/text_setting"
+                    android:text="@string/Feedback"/>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            style="@style/SettingCard">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="58dp"
+                android:orientation="horizontal"
+                android:clickable="true"
+                android:foreground="?attr/selectableItemBackground"
+                style="@style/SettingCard_Theme">
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="11dp"
+                    android:src="@drawable/share"
+                    style="@style/Icons_setting" />
+                <TextView
+                    android:layout_marginStart="10dp"
+                    android:layout_width="250dp"
+                    android:layout_height="20dp"
+                    android:textSize="15sp"
+                    style="@style/text_setting"
+                    android:text="@string/Share"/>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            style="@style/SettingCard">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="58dp"
+                android:orientation="horizontal"
+                android:clickable="true"
+                android:foreground="?attr/selectableItemBackground"
+                style="@style/SettingCard_Theme">
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="11dp"
+                    android:src="@drawable/eye"
+                    style="@style/Icons_setting" />
+                <TextView
+                    android:layout_marginStart="10dp"
+                    android:layout_width="250dp"
+                    android:layout_height="20dp"
+                    android:textSize="15sp"
+                    style="@style/text_setting"
+                    android:text="@string/Politic"/>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        style="@style/BottomNavigationView" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

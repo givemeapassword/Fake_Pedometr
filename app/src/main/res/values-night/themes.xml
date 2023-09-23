@@ -5,7 +5,7 @@
         <item name="colorPrimary">@color/purple_200</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>
         <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondary">@color/icons_setting_dark</item>
         <item name="colorSecondaryVariant">@color/teal_200</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor">@color/back_dark</item>
@@ -33,15 +33,10 @@
         <item name="android:layout_marginTop">7dp</item>
     </style>
 
-    <style name="Button">
-        <item name="android:startColor">@color/peach</item>
-        <item name="android:endColor">@color/gradient2_main_button_white</item>
-        <item name="background">@drawable/circle_button_white</item>
-    </style>
 
     <style name="Main_text" parent="LinerLayout">
         <item name="android:textColor">@color/back_white</item>
-        <item name="android:textSize">16sp</item>
+        <item name="android:textSize">17sp</item>
     </style>
     <style name="Theme">
         <item name="android:background">@color/back_dark</item>
@@ -50,8 +45,21 @@
         <item name="android:layout_width">145dp</item>
         <item name="android:layout_height">4dp</item>
         <item name="android:layout_marginStart">21dp</item>
+        <item name="android:layout_marginBottom">21dp</item>
         <item name="android:background">@color/back_white_bottom</item>
     </style>
 
+
+    <style name="SettingCard_Theme" parent="SettingCard.View">
+        <item name="android:background">@color/setting_panel_dark</item>
+    </style>
+    <style name="Icons_setting">
+        <item name="tint">@color/icons_setting_dark</item>
+        <item name="android:layout_gravity">center_vertical</item>
+    </style>
+    <style name="text_setting">
+        <item name="android:textColor">@color/back_white</item>
+        <item name="android:layout_gravity">center_vertical</item>
+    </style>
 
 </resources>
