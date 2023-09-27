@@ -28,7 +28,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActiveMainBinding.inflate(layoutInflater)
-
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
         setContentView(binding.root)
 
         binding.bottomNavigationView.setOnItemSelectedListener {
@@ -76,4 +76,5 @@ class MainActivity : AppCompatActivity() {
 
 
     }
+
 
