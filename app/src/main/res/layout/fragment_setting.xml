@@ -5,6 +5,7 @@
     style="@style/Theme"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    tools:context=".MainActivity"
     >
 
 
@@ -156,6 +157,7 @@
                     android:src="@drawable/google"
                     style="@style/Icons_setting" />
                 <TextView
+                    android:id="@+id/text3"
                     android:layout_marginStart="10dp"
                     android:layout_width="250dp"
                     android:layout_height="41dp"
@@ -234,13 +236,13 @@
         </androidx.cardview.widget.CardView>
         <androidx.cardview.widget.CardView
             style="@style/SettingCard"
-            android:id="@+id/counter"
             android:layout_marginTop="12dp">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="58dp"
                 android:orientation="horizontal"
                 android:clickable="true"
+                android:id="@+id/counter"
                 android:foreground="?attr/selectableItemBackground"
                 style="@style/SettingCard_Theme">
                 <ImageView

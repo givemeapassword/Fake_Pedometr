@@ -1,28 +1,29 @@
 package com.example.fakepedometr
 
+
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.EditText
-import android.widget.Switch
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatDelegate
-import com.example.fakepedometr.databinding.ActiveMainBinding
+import androidx.fragment.app.activityViewModels
 import com.example.fakepedometr.databinding.FragmentSettingBinding
 
 
 class Setting : Fragment() {
     private lateinit var binding: FragmentSettingBinding
+    private val dataModel: DataModel by activityViewModels()
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        binding = FragmentSettingBinding.inflate(inflater,container,false)
+    ): View {
 
+        binding = FragmentSettingBinding.inflate(inflater)
         return binding.root
     }
 
@@ -37,23 +38,29 @@ class Setting : Fragment() {
                 AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
             }
         }
-        binding.counter.setOnClickListener{
-
+        binding.counter.setOnClickListener {
+            showEditTextDialog()
         }
     }
 
-    /*private fun showEditTextDialog(binding: FragmentSettingBinding){
-        binding.counter.setOnClickListener{
 
-            val builder = AlertDialog.Builder(this)
+
+    private fun showEditTextDialog(){
+            val builder = AlertDialog.Builder(requireContext())
             val inflater = layoutInflater
-            val dialogLayout = inflater.inflate(R.layout.edit_text_layout)
+            val dialogLayout = inflater.inflate(R.layout.edit_text_layout,null)
             val editText = dialogLayout.findViewById<EditText>(R.id.et_text)
 
             with(builder){
-                setTitle("asas")
+                setTitle("Ввод шагов")
+                setPositiveButton("OK"){ _, _ ->
+                    dataModel.message.value =  editText.text.toString()
+
+                }
+                setView(dialogLayout)
+                show()
             }
 
-        }
-    }*/
+    }
+
 }

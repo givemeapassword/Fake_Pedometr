@@ -1,29 +1,18 @@
 package com.example.fakepedometr
 
-import android.annotation.SuppressLint
-import android.graphics.Color
+
 import android.os.Bundle
-import android.util.Log
-import android.view.View
-import android.widget.Button
-import android.widget.CompoundButton
-import android.widget.Toast
+import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
-import androidx.constraintlayout.widget.ConstraintLayout
-
 import androidx.fragment.app.Fragment
-import androidx.navigation.ui.setupActionBarWithNavController
 import com.example.fakepedometr.databinding.ActiveMainBinding
-import com.example.fakepedometr.databinding.FragmentSettingBinding
 
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActiveMainBinding
-
-
-
+    private val dataModel: DataModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,40 +20,35 @@ class MainActivity : AppCompatActivity() {
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
         setContentView(binding.root)
 
+
+    }
+
+    override fun onResume() {
+        super.onResume()
+        //очень топорно
+        binding = ActiveMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
         binding.bottomNavigationView.setOnItemSelectedListener {
             when (it.itemId) {
                 R.id.Home -> {
-
-                    replaceFragment(Home())
+                    //и это кажется тоже очень топорно
+                    onResume()
                 }
 
-                R.id.Settings -> {
-                    replaceFragment(Setting())
-                }
+                R.id.Settings -> { replaceFragment(Setting()) }
 
-                R.id.histogram -> {
-                    replaceFragment(StatisticFragment())
-                }
+                R.id.histogram -> { replaceFragment(StatisticFragment()) }
 
-                else -> {
-
-                }
+                else -> { }
 
             }
             true
         }
-
-
-        /*bindingSetting.switcher.setOnCheckedChangeListener{
-                _,checkeId ->
-            Log.i("Я ТУТ БЫЛ21212","СВИТЧЕР ХОРО221Ш")
-            when(checkeId){
-                true -> AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
-                false -> AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
-            }
-        }*/
-
+        dataModel.message.observe(this) {
+            binding.countersteps.text = dataModel.message.value
+        }
     }
+
 
 
     private fun replaceFragment(fragment: Fragment){
@@ -73,6 +57,8 @@ class MainActivity : AppCompatActivity() {
         fragmentTransaction.replace(R.id.main, fragment)
         fragmentTransaction.commit()
     }
+
+
 
 
     }
