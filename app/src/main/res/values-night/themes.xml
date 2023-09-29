@@ -18,7 +18,7 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="labelVisibilityMode">unlabeled</item>
         <item name="itemBackground">@color/back_dark_bottom</item>
-        <item name="itemIconTint">@color/back_white_bottom</item>
+        <item name="itemIconTint">@color/bottom_nav_item_color</item>
         <item name="itemIconSize">35dp</item>
         <item name="menu">@menu/bottom_nav</item>
     </style>

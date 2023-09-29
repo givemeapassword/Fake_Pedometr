@@ -1,10 +1,10 @@
 package com.example.fakepedometr
 
 
+
 import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.app.AppCompatDelegate
 import androidx.fragment.app.Fragment
 import com.example.fakepedometr.databinding.ActiveMainBinding
 
@@ -17,10 +17,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActiveMainBinding.inflate(layoutInflater)
-        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
         setContentView(binding.root)
-
-
     }
 
     override fun onResume() {
@@ -37,7 +34,7 @@ class MainActivity : AppCompatActivity() {
 
                 R.id.Settings -> { replaceFragment(Setting()) }
 
-                R.id.histogram -> { replaceFragment(StatisticFragment()) }
+                R.id.Histogram -> { replaceFragment(StatisticFragment()) }
 
                 else -> { }
 
@@ -57,7 +54,6 @@ class MainActivity : AppCompatActivity() {
         fragmentTransaction.replace(R.id.main, fragment)
         fragmentTransaction.commit()
     }
-
 
 
 

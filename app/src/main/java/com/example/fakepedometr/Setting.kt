@@ -1,6 +1,7 @@
 package com.example.fakepedometr
 
 
+
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -24,11 +25,14 @@ class Setting : Fragment() {
     ): View {
 
         binding = FragmentSettingBinding.inflate(inflater)
+
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+
 
         binding.switcher.setOnCheckedChangeListener { _, isChecked ->
             if (isChecked) {
