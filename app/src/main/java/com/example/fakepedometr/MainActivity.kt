@@ -3,6 +3,7 @@ package com.example.fakepedometr
 
 
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
@@ -11,6 +12,7 @@ import com.example.fakepedometr.databinding.ActiveMainBinding
 
 class MainActivity : AppCompatActivity() {
 
+
     private lateinit var binding: ActiveMainBinding
     private val dataModel: DataModel by viewModels()
 
@@ -18,9 +20,17 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActiveMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        Log.i("Activity","onCreate")
+    }
+
+    override fun onStart() {
+        super.onStart()
     }
 
     override fun onResume() {
+        Log.i("Activity","onResume")
+
+
         super.onResume()
         //очень топорно
         binding = ActiveMainBinding.inflate(layoutInflater)
@@ -28,13 +38,20 @@ class MainActivity : AppCompatActivity() {
         binding.bottomNavigationView.setOnItemSelectedListener {
             when (it.itemId) {
                 R.id.Home -> {
+                    Log.i("Activity","Home")
                     //и это кажется тоже очень топорно
                     onResume()
                 }
 
-                R.id.Settings -> { replaceFragment(Setting()) }
+                R.id.Settings -> {
+                    replaceFragment(Setting())
+                    Log.i("Activity","Settings")
+                }
 
-                R.id.Histogram -> { replaceFragment(StatisticFragment()) }
+                R.id.Histogram -> {
+                    replaceFragment(StatisticFragment())
+                    Log.i("Activity","Histogram")
+                }
 
                 else -> { }
 
@@ -42,9 +59,11 @@ class MainActivity : AppCompatActivity() {
             true
         }
         dataModel.message.observe(this) {
+            Log.i("Activity","Change Data")
             binding.countersteps.text = dataModel.message.value
         }
     }
+
 
 
 
